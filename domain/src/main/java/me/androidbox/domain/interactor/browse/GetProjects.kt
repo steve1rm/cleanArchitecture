@@ -1,4 +1,4 @@
-package me.androidbox.domain.interactor.bookmark
+package me.androidbox.domain.interactor.browse
 
 import io.reactivex.Observable
 import me.androidbox.domain.executor.PostExecutionThread
