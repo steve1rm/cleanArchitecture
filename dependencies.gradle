@@ -15,7 +15,7 @@ ext {
     /* Testing */
     jUnitVersion = '4.12'
     assertJVersion = '3.8.0'
-    mockitoVersion = '1.6.0'
+    mockitoKotlinVersion = '1.6.0'
 
     domainDependencies = [
             javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVerison}",
@@ -25,7 +25,7 @@ ext {
 
     domainTestDependencies = [
             junit:   "junit:junit:${jUnitVersion}",
-            mockito: "com.nhaarman:mockito-kotlin:${mockitoVersion}",
+            mockito: "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
             assertJ: "org.assertj:assertj-core:${assertJVersion}"
     ]
 }
