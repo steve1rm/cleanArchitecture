@@ -6,7 +6,6 @@ import me.androidbox.domain.executor.PostExecutionThread
 import me.androidbox.domain.interactor.mockdata.ProjectDataFactory
 import me.androidbox.domain.model.Project
 import me.androidbox.domain.repository.ProjectsRepository
-import org.assertj.core.api.Assertions.assertThat
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
@@ -33,12 +32,7 @@ class GetProjectsTest {
 
         val testObserver = getProjects.buildUseCaseObservable().test()
 
-        //testObserver.hasSubscription()
-
-        val num1 = 1
-        val num2 = 2
-
-        assertThat(num1).isEqualTo(num2)
+        testObserver.completions()
     }
 
     private fun stubGetProjects(observable: Observable<List<Project>>) {
