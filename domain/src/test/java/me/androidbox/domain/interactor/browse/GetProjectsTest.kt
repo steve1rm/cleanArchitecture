@@ -35,6 +35,16 @@ class GetProjectsTest {
         testObserver.completions()
     }
 
+    @Test
+    fun testBuildUseCaseObservable_returnsData() {
+        val projects = ProjectDataFactory.makeProjectList(2)
+        stubGetProjects(Observable.just(projects))
+
+        val testObserver = getProjects.buildUseCaseObservable().test()
+
+        testObserver.assertValue(projects)
+    }
+
     private fun stubGetProjects(observable: Observable<List<Project>>) {
         whenever(projectsRepository.getProjects()).thenReturn(observable)
     }

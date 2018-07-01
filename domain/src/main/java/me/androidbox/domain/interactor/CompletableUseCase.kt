@@ -12,7 +12,7 @@ abstract class CompletableUseCase<in Params> constructor(
 
     private val disposables = CompositeDisposable()
 
-    protected abstract fun buildUseCaseCompletable(params: Params? = null): Completable
+    abstract fun buildUseCaseCompletable(params: Params? = null): Completable
 
     open fun execute(observer: DisposableCompletableObserver, params: Params?) {
         val completable = buildUseCaseCompletable(params)

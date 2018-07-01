@@ -5,7 +5,7 @@ import java.util.*
 
 
 object ProjectDataFactory {
-    private fun randomUuid() = UUID.randomUUID().toString()
+    fun randomUuid() = UUID.randomUUID().toString()
 
     private fun randomBoolean() = Math.random() < 0.5
 

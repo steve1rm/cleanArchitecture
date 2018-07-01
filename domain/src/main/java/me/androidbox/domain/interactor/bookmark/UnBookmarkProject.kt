@@ -6,10 +6,10 @@ import me.androidbox.domain.interactor.CompletableUseCase
 import me.androidbox.domain.repository.ProjectsRepository
 import javax.inject.Inject
 
-class UnbookmarkProject @Inject constructor(
+class UnBookmarkProject @Inject constructor(
         private val projectsRepository: ProjectsRepository,
         postExecutionThread: PostExecutionThread)
-    : CompletableUseCase<UnbookmarkProject.Params>(postExecutionThread) {
+    : CompletableUseCase<UnBookmarkProject.Params>(postExecutionThread) {
 
     override fun buildUseCaseCompletable(params: Params?): Completable {
         if(params == null) {
