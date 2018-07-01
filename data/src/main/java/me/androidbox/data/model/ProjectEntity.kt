@@ -1,6 +1,6 @@
-package me.androidbox.domain.model
+package me.androidbox.data.model
 
-data class Project(
+data class ProjectEntity(
         val id: String,
         val name: String,
         val fullName: String,
@@ -9,5 +9,4 @@ data class Project(
         val ownerName: String,
         val ownerAvator: String,
         val isBookedMarked: Boolean) {
-
 }
