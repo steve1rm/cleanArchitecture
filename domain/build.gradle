@@ -11,6 +11,3 @@ dependencies {
     testImplementation domainTestDependencies.mockito
     testImplementation domainTestDependencies.assertJ
 }
-
-sourceCompatibility = "1.8"
-targetCompatibility = "1.8"
